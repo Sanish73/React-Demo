@@ -9,6 +9,10 @@ function Todo(props){
     function deleteHandler(){
        modelToOpen(true)
     }
+
+    function closeModalHandler(){
+        modelToOpen(false)
+    }
 return(
     <div className="card">
         <h2>{props.text}</h2>
@@ -16,8 +20,8 @@ return(
         <span>Hey</span>
             <button className='btn' onClick={deleteHandler}>Delete</button>
         </div>
-        {modelToCheck ? <Modal /> : null}
-        {modelToCheck ? <Backdrop /> : null}
+        {modelToCheck ? <Modal onCancle={closeModalHandler} onConfirm={closeModalHandler}/> : null}
+        {modelToCheck ? <Backdrop onClick={closeModalHandler} /> : null}
       </div>
 )
 }
