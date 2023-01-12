@@ -1,16 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Todo from './component/Todo'
 
 function App() {
   return (
     <div>
       <h1>My App</h1>
-      <div  className="card">
-        <h2>Title</h2>
-        <div className='actions'>
-        <button className='btn'>Delete</button>
-        </div>
-      </div>
+      <Todo text='Learn React'/>
+      <Todo text='Explore React'/>
+      <Todo text='Creact React Project'/>
     </div>
   );
 }
